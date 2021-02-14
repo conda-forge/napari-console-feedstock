@@ -1,5 +1,5 @@
 {% set name = "napari-console" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3fc9370bc15cb156c1840c7522045a18eed3cc85d660f0d36ca6e421a9caaa3e
+  sha256: aa21dd0953b78cee8452d8dc3ef29adb749231dc455177369af530f27f86d544
 
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -39,7 +39,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A plugin that adds a console to napari'
+  summary: A plugin that adds a console to napari
   description: |
     napari-console is a plugin for the napari n-dimensional image
     viewer. It adds an IPython console to the viewer, allowing users

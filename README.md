@@ -1,11 +1,11 @@
-About napari-console
-====================
+About napari-console-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-console-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/napari/napari-console
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/napari-console-feedstock/blob/main/LICENSE.txt)
 
 Summary: A plugin that adds a console to napari
 

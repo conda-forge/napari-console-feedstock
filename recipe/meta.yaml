@@ -1,5 +1,5 @@
 {% set name = "napari-console" %}
-{% set version = "0.0.7" %}
+{% set version = "0.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b6a5d71691827992ab7765ead52bd6d5b648b4a69eb3535f4e6524c37054c6a4
+  sha256: 9fa3f665ec0f5f351c364b212e73cdc4004615461dca6cbfaacf028525ec740a
 
 
 build:
@@ -27,7 +27,7 @@ requirements:
     - ipykernel >=5.2.0
     - ipython >=7.7.0
     - napari-plugin-engine >=0.1.9
-    - qtconsole-base >=4.5.1,!=4.7.6
+    - qtconsole-base >=4.5.1,!=4.7.6,!=5.4.2
     - qtpy >=1.7.0
 
 test:

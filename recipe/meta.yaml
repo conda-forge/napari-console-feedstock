@@ -1,5 +1,5 @@
 {% set name = "napari-console" %}
-{% set version = "0.0.8" %}
+{% set version = "0.0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9fa3f665ec0f5f351c364b212e73cdc4004615461dca6cbfaacf028525ec740a
+  sha256: 3bc86dd96cf94b1af96bba1043f90a39b1369bb978a8df9038a1ac422e66b532
 
 
 build:

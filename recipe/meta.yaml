@@ -33,6 +33,7 @@ requirements:
 test:
   requires:
     - pyqt
+    - napari >=0.5.0
   imports:
     - napari_console
 

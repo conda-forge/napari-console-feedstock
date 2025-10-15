@@ -55,5 +55,4 @@ extra:
   recipe-maintainers:
     - conda-forge/napari
     - czaki
-    - sofroniewn
     - jni

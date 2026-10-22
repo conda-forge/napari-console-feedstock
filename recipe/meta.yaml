@@ -30,14 +30,6 @@ requirements:
     - qtconsole-base >=4.5.1,!=4.7.6,!=5.4.2
     - qtpy >=1.7.0
 
-test:
-  requires:
-    - pyqt
-    - napari >=0.5.0
-    - python {{ python_min }}
-  imports:
-    - napari_console
-
 about:
   home: https://github.com/napari/napari-console
   license: BSD-3-Clause

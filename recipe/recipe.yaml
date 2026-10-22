@@ -1,0 +1,61 @@
+schema_version: 1
+
+context:
+  version: "0.1.5"
+  python_min: "3.11"
+
+package:
+  name: napari-console
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/n/napari-console/napari_console-${{ version }}.tar.gz
+  sha256: c06e48709802b833a1fb3aab190454fb0211abf3dc86e1d80158c012b9aaa8d2
+
+build:
+  noarch: python
+  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools >=42
+    - setuptools_scm >=8
+    - wheel
+  run:
+    - python >=${{ python_min }}
+    - ipykernel >=7.1
+    - ipython >=7.7.0
+    - qtconsole-base >=4.5.1,!=4.7.6,!=5.4.2
+    - qtpy >=1.7.0
+
+tests:
+  - script:
+      - python -c "import napari_console"
+      - python -m pip check
+    requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pip
+        - pyqt
+        - napari >=0.5.0
+
+about:
+  homepage: https://github.com/napari/napari-console
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: A plugin that adds a console to napari
+  description: |
+    napari-console is a plugin for the napari n-dimensional image
+    viewer. It adds an IPython console to the viewer, allowing users
+    to interact with the viewer's API.
+  documentation: https://github.com/napari/napari-console
+  repository: https://github.com/napari/napari-console
+
+extra:
+  recipe-maintainers:
+    - conda-forge/napari
+    - czaki
+    - jni

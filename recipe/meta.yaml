@@ -12,7 +12,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -25,7 +25,7 @@ requirements:
     - setuptools_scm
   run:
     - python >={{ python_min }}
-    - ipykernel
+    - ipykernel >=7.1
     - ipython >=7.7.0
     - qtconsole-base >=4.5.1,!=4.7.6,!=5.4.2
     - qtpy >=1.7.0
